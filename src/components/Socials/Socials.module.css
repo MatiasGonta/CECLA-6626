@@ -1,0 +1,125 @@
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    font-size: 16px;
+    margin-top: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    border-radius: 4px;
+}
+  
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+/*instagram*/
+.socialContainer:nth-child(1):hover {
+    background-color: #d62976;
+}
+/*facebook*/
+.socialContainer:nth-child(2):hover {
+    background-color: #0072b1;
+}
+/* Whatsapp*/
+.socialContainer:nth-child(3):hover {
+    background-color: #128C7E;
+}
+/* Email*/
+.socialContainer:nth-child(4):hover {
+    background-color: #d62932;
+}
+  
+.socialContainer:active {
+    transform: scale(0.9);
+}
+  
+.socialIcon {
+    color: white;
+}
+  
+.socialContainer:hover .socialIcon {
+    animation: slide-in-top 0.3s both;
+}
+  
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+/* Toast */
+.toastContainer {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    background-color: white;
+    padding: 20px 40px;
+    width: 375px;
+    border-radius: 4px;
+    border-right: 8px solid var(--cecla-purple);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
+    z-index: 50;
+}
+
+.toastHidden {
+    display: none;
+}
+
+.toastShow {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    animation: toast-active 1s ease forwards;
+}
+
+.toastText {
+    font-size: 18px;
+}
+
+.toastIcon {
+    font-size: 30px;
+    margin-left: 10px;
+    color: var(--cecla-purple);
+}
+
+@keyframes toast-active {
+    0% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(10%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media (min-width: 640px) {
+    .toastContainer {
+        width: 400px;
+    }
+}

@@ -1,0 +1,65 @@
+---
+interface Props {
+    theme: string;
+    courseList: {
+        name: string,
+        duration: string,
+        output: string,
+        classSchedule: string,
+        description: string
+    }[];
+    img: string;
+}
+
+const { theme, courseList, img } = Astro.props;
+---
+
+<a
+    href=`/classrooms/${theme.toLocaleLowerCase().trim()}`
+    class="w-[450px] sm:w-[450px] h-[300px] mx-[12.5px] mt-[25px] relative rounded-[10px] shadow-[0_10px_20px_rgba(0, 0, 0, 0.2)] overflow-hidden"
+>
+    <div class="card w-full h-full cursor-pointer">
+        <div
+            class="frontContent w-full h-full transition-all ease-[cubic-bezier(0.23, 1, 0.320, 1)] duration-500 bg-cover bg-bottom"
+            style={{
+                background: `url('${img}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'bottom'
+            }}
+        >
+            <div class="w-full h-full flex justify-center items-center bg-[#222222e8]">
+                <p class="frontHeading text-[30px] text-center text-white font-bold opacity-1 bg-[linear-gradient(-45deg, white 0%, #e8e8e8 100% )] bg-clip-text transition-opacity duration-500">
+                    {theme}
+                </p>
+            </div>
+        </div>
+        <div class="content absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center align-center gap-2.5 bg-[linear-gradient(-45deg,var(--cecla-purple)_0%,var(--cecla-purple-light)_100%)] text-[#e8e8e8] p-[20px] leading-normal rounded-md pointer-events-none translate-y-[96%] transition-all duration-500 ease-[cubic-bezier(0.23, 1, 0.320, 1)]">
+            <span class="text-[30px] font-bold text-white">
+                {theme}
+            </span>
+            <ul class="w-[350px] leading-5 align-justify sm:w-[375px]">
+                {
+                    courseList.map((c) => (
+                        <li class="text-white text-[16px] pl-[15px] mt-[15px] relative leading-5 before:content-['➥'] before:block before:w-[12px] before:h-[12px] before:absolute before:top-0 before:left-[-15px]">
+                            {c.name}.
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card:hover .content {
+        transform: translateY(0);
+    }
+  
+    .card:hover .frontContent {
+        transform: translateY(-30%);
+    }
+  
+    .card:hover .frontContent .frontHeading {
+        opacity: 0;
+    }  
+</style>

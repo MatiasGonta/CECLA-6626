@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { courses } from '../../data/Courses.ts';
+import CourseCard from '../../components/CourseCard.astro';
+---
+
+<Layout title="CECLA 6626 - Areas">
+	<section class="w-full flex flex-col">
+		<article class="w-full h-[450px] bg-cecla-front bg-cover">
+			<div class="w-full h-full flex justify-center items-center bg-[#222222e8]">
+				<h1 class="text-white text-[45px] font-bold">Cursos CECLA</h1>
+			</div>
+		</article>
+		<article class="w-full p-[30px] sm:p-[60px] text-justify relative bg-white max-w-[1300px] mx-auto">
+			<h2 class="font-bold text-[30px] mb-[15px] text-cecla-purple">¡Descubre, Capacítate y Emprende explorando nuestros cursos!</h2>
+			<p>Explorá todos los cursos que tenemos para ofrecerte. Capacitate con nosotros, accedé a nuestras aulas totalmente equipadas para el desarrollo de tu próximo emprendimiento.</p>
+		</article>
+	</section>
+	<section class="w-full mt-[40px] mb-[100px]">
+		<article class="mx-auto w-full max-w-[1300px] flex flex-row flex-wrap justify-evenly">
+			{
+				courses.map((course) => <CourseCard theme={course.theme} courseList={course.courseList} img={course.src} />)
+			}
+		</article>
+	</section>
+</Layout>
+
+<style>
+</style>

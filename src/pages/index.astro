@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Slider from "../components/Slider.astro";
+---
+
+<Layout title="CECLA 6626">
+	<section
+		class="w-full h-[585px] bg-cecla-front bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden"
+	>
+		<article
+			class="relative w-full h-full bg-opacity-20 bg-cecla-transparent-purple"
+		>
+			<div
+				class="absolute bottom-0 left-0 w-full overflow-hidden leading-0 transform rotate-180"
+			>
+				<svg
+					class="relative w-full h-[27px]"
+					style="transform: rotateY(180deg)"
+					data-name="Layer 1"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1200 120"
+					preserveAspectRatio="none"
+				>
+					<path
+						class="shape-fill"
+						style="fill: #fff;"
+						d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+					>
+					</path>
+				</svg>
+			</div>
+		</article>
+	</section>
+
+	<section
+		class="section-cecla-resume my-0 mx-auto py-[100px] px-[25px] max-w-[1200px] flex justify-evenly lg:px-0"
+	>
+		<div class="w-full lg:w-[425px]">
+			<h2 class="text-[30px] mb-[15px] text-cecla-purple font-bold">
+				Bienvenidos al Centro de Capacitación Laboral Nº6626
+			</h2>
+			<p class="text-[20px]">
+				El Centro de Capacitación Laboral 6626, Brig Gral. Estanislao
+				López es una Institución Educativa Provincial que funciona en
+				Cañada de Gómez desde el año 1986 formando estudiantes en
+				diferentes oficios. Proporciona una salida laboral para
+				diferentes ámbitos, con conocimientos sólidos para el egresado,
+				tanto en lo teórico como en lo práctico.
+			</p>
+			<button>
+				<a href="/signup">
+					<span>Inscripciones</span>
+				</a>
+			</button>
+		</div>
+		<div>
+			<img
+				class="hidden lg:block lg:w-[375px] lg:h-[375px]"
+				src="/assets/CECLA6626-logo.png"
+				alt="CECLA6626-logo"
+			/>
+		</div>
+	</section>
+
+	<section>
+		<article class="w-full">
+			<Slider />
+		</article>
+	</section>
+
+	<section
+		class="section-cecla-info max-w-[1300px] w-full text-[20px] flex flex-col justify-center py-[100px] my-0 mx-auto lg:flex-row"
+	>
+		<article class="min-h-[368px] w-full lg:w-[500px]">
+			<ol
+				class="flex flex-col justify-evenly h-[368px] max-w-[500px] mx-auto px-[20px] text-[30px]"
+			>
+				<li
+					class="relative before:content-[counter(item)] before:mr-[15px] before:text-[25px] before:text-[#fff] before:bg-cecla-purple before:font-bold before:py-[3px] before:px-[12px] before:rounded-[3px] after:absolute after:top-[8px] after:content-[''] after:w-[39px] after:h-[39px] after:border-r-[2px] after:border-r-solid after:border-r-cecla-purple after:border-b-[2px] after:border-b-solid after:border-b-cecla-purple after:rounded-[3px] after:left-[3px]"
+				>
+					¡Cursos gratuitos!
+				</li>
+				<li
+					class="pl-[25px] relative before:content-[counter(item)] before:mr-[15px] before:text-[25px] before:text-[#fff] before:bg-cecla-purple before:font-bold before:py-[3px] before:px-[12px] before:rounded-[3px] after:absolute after:top-[8px] after:content-[''] after:w-[39px] after:h-[39px] after:border-r-[2px] after:border-r-solid after:border-r-cecla-purple after:border-b-[2px] after:border-b-solid after:border-b-cecla-purple after:rounded-[3px] after:left-[27px]"
+				>
+					Anuales y cuatrimestrales
+				</li>
+				<li
+					class="pl-[50px] relative before:content-[counter(item)] before:mr-[15px] before:text-[25px] before:text-[#fff] before:bg-cecla-purple before:font-bold before:py-[3px] before:px-[12px] before:rounded-[3px] after:absolute after:top-[8px] after:content-[''] after:w-[39px] after:h-[39px] after:border-r-[2px] after:border-r-solid after:border-r-cecla-purple after:border-b-[2px] after:border-b-solid after:border-b-cecla-purple after:rounded-[3px] after:left-[52px]"
+				>
+					Con salida laboral
+				</li>
+				<li
+					class="pl-[75px] relative before:content-[counter(item)] before:mr-[15px] before:text-[25px] before:text-[#fff] before:bg-cecla-purple before:font-bold before:py-[3px] before:px-[12px] before:rounded-[3px] after:absolute after:top-[8px] after:content-[''] after:w-[39px] after:h-[39px] after:border-r-[2px] after:border-r-solid after:border-r-cecla-purple after:border-b-[2px] after:border-b-solid after:border-b-cecla-purple after:rounded-[3px] after:left-[77px]"
+				>
+					Certeficación oficial
+				</li>
+			</ol>
+		</article>
+		<article
+			class="min-h-[368px] w-full text-center px-[25px] sm:px-0 lg:w-[630px]"
+		>
+			<h3 class="text-[30px] text-cecla-purple font-bold">
+				<i
+					class="fa-solid fa-book text-[30px] text-cecla-purple font-bold"
+				></i> Preparate laboral y profesionalmente
+			</h3>
+			<span class="block max-w-[500px] my-[15px] mx-auto">
+				<i class="inline text-[25px] my-[35px] mx-0">
+					El CECLA 26 ofrece cursos en distintas áreas. ¡Acercate y
+					descubrilas!
+				</i>
+			</span>
+			<p class="max-w-[550px] my-0 mx-auto text-left">
+				El Centro de Capacitación Laboral y Formación Profesional N°6626
+				ofrece diferentes cursos con Certificaciones del Ministerio de
+				Educación de Santa Fe. <br /> Estudiá informática, reparación de
+				computadoras, electricidad, costura, cocina, arte y diseño,
+				mecánica, electrónica, gas y ¡mucho más!
+			</p>
+			<button>
+				<a href="/classrooms">
+					<span>Aulas/Áreas</span>
+				</a>
+			</button>
+		</article>
+	</section>
+</Layout>
+
+<style>
+	.section-cecla-resume button,
+	.section-cecla-info button {
+		margin-top: 25px;
+		background-color: #fff;
+		height: 45px;
+		width: 150px;
+		border-radius: 10px;
+		border: 1px solid var(--cecla-purple);
+		box-shadow:
+			3px 3px #fff,
+			5px 5px var(--cecla-purple);
+		transition: box-shadow 300ms linear;
+		cursor: pointer;
+	}
+	.section-cecla-resume button a,
+	.section-cecla-info button a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.section-cecla-resume button a span,
+	.section-cecla-info button a span {
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-size: 16px;
+		color: var(--cecla-purple);
+	}
+	.section-cecla-resume button:hover,
+	.section-cecla-info button:hover {
+		box-shadow: none;
+		background-color: var(--cecla-purple);
+	}
+	.section-cecla-resume button:hover a span,
+	.section-cecla-info button:hover a span {
+		color: #fff;
+	}
+	.section-cecla-info article:nth-child(1) ol li {
+		counter-increment: item;
+	}
+</style>
