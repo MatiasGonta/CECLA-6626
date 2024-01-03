@@ -47,9 +47,9 @@ import Slider from "../components/Slider.astro";
 				diferentes ámbitos, con conocimientos sólidos para el egresado,
 				tanto en lo teórico como en lo práctico.
 			</p>
-			<button>
-				<a href="/signup">
-					<span>Inscripciones</span>
+			<button class="group mt-6 bg-white w-[150px] h-[45px] rounded-xl border border-cecla-purple shadow-[3px_3px_rgb(255,255,255),5px_5px_rgb(65,66,156)] transition-shadow duration-300 cursor-pointer hover:shadow-none hover:bg-cecla-purple">
+				<a class="flex justify-center items-center" href="/signup">
+					<span class="tracking-[1px] font-bold text-[16px] text-cecla-purple group-hover:text-[#fff]">Inscripciones</span>
 				</a>
 			</button>
 		</div>
@@ -118,9 +118,9 @@ import Slider from "../components/Slider.astro";
 				computadoras, electricidad, costura, cocina, arte y diseño,
 				mecánica, electrónica, gas y ¡mucho más!
 			</p>
-			<button>
-				<a href="/classrooms">
-					<span>Aulas/Áreas</span>
+			<button class="group mt-6 bg-white w-[150px] h-[45px] rounded-xl border border-cecla-purple shadow-[3px_3px_rgb(255,255,255),5px_5px_rgb(65,66,156)] transition-shadow duration-300 cursor-pointer hover:shadow-none hover:bg-cecla-purple">
+				<a class="flex justify-center items-center" href="/classrooms">
+					<span class="tracking-[1px] font-bold text-[16px] text-cecla-purple group-hover:text-[#fff]">Aulas/Áreas</span>
 				</a>
 			</button>
 		</article>
@@ -128,43 +128,7 @@ import Slider from "../components/Slider.astro";
 </Layout>
 
 <style>
-	.section-cecla-resume button,
-	.section-cecla-info button {
-		margin-top: 25px;
-		background-color: #fff;
-		height: 45px;
-		width: 150px;
-		border-radius: 10px;
-		border: 1px solid var(--cecla-purple);
-		box-shadow:
-			3px 3px #fff,
-			5px 5px var(--cecla-purple);
-		transition: box-shadow 300ms linear;
-		cursor: pointer;
-	}
-	.section-cecla-resume button a,
-	.section-cecla-info button a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.section-cecla-resume button a span,
-	.section-cecla-info button a span {
-		letter-spacing: 1px;
-		font-weight: 700;
-		font-size: 16px;
-		color: var(--cecla-purple);
-	}
-	.section-cecla-resume button:hover,
-	.section-cecla-info button:hover {
-		box-shadow: none;
-		background-color: var(--cecla-purple);
-	}
-	.section-cecla-resume button:hover a span,
-	.section-cecla-info button:hover a span {
-		color: #fff;
-	}
-	.section-cecla-info article:nth-child(1) ol li {
+	.section-cecla-info article ol li {
 		counter-increment: item;
 	}
 </style>

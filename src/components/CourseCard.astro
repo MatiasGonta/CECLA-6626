@@ -18,9 +18,9 @@ const { theme, courseList, img } = Astro.props;
     href=`/classrooms/${theme.toLocaleLowerCase().trim()}`
     class="w-[450px] sm:w-[450px] h-[300px] mx-[12.5px] mt-[25px] relative rounded-[10px] shadow-[0_10px_20px_rgba(0, 0, 0, 0.2)] overflow-hidden"
 >
-    <div class="card w-full h-full cursor-pointer">
+    <div class="group card w-full h-full cursor-pointer">
         <div
-            class="frontContent w-full h-full transition-all ease-[cubic-bezier(0.23, 1, 0.320, 1)] duration-500 bg-cover bg-bottom"
+            class="frontContent w-full h-full transition-all ease-[cubic-bezier(0.23, 1, 0.320, 1)] duration-500 bg-cover bg-bottom group-hover:-translate-y-1/3"
             style={{
                 background: `url('${img}')`,
                 backgroundSize: 'cover',
@@ -28,12 +28,12 @@ const { theme, courseList, img } = Astro.props;
             }}
         >
             <div class="w-full h-full flex justify-center items-center bg-[#222222e8]">
-                <p class="frontHeading text-[30px] text-center text-white font-bold opacity-1 bg-[linear-gradient(-45deg, white 0%, #e8e8e8 100% )] bg-clip-text transition-opacity duration-500">
+                <p class="frontHeading text-[30px] text-center text-white font-bold opacity-1 bg-[linear-gradient(-45deg, white 0%, #e8e8e8 100% )] bg-clip-text transition-opacity duration-500 group-hover:opacity-0">
                     {theme}
                 </p>
             </div>
         </div>
-        <div class="content absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center align-center gap-2.5 bg-[linear-gradient(-45deg,var(--cecla-purple)_0%,var(--cecla-purple-light)_100%)] text-[#e8e8e8] p-[20px] leading-normal rounded-md pointer-events-none translate-y-[96%] transition-all duration-500 ease-[cubic-bezier(0.23, 1, 0.320, 1)]">
+        <div class="content absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center align-center gap-2.5 bg-[linear-gradient(-45deg,var(--cecla-purple)_0%,var(--cecla-purple-light)_100%)] text-[#e8e8e8] p-[20px] leading-normal rounded-md pointer-events-none translate-y-[96%] transition-all duration-500 ease-[cubic-bezier(0.23, 1, 0.320, 1)] group-hover:translate-y-0">
             <span class="text-[30px] font-bold text-white">
                 {theme}
             </span>
@@ -49,17 +49,3 @@ const { theme, courseList, img } = Astro.props;
         </div>
     </div>
 </div>
-
-<style>
-    .card:hover .content {
-        transform: translateY(0);
-    }
-  
-    .card:hover .frontContent {
-        transform: translateY(-30%);
-    }
-  
-    .card:hover .frontContent .frontHeading {
-        opacity: 0;
-    }  
-</style>

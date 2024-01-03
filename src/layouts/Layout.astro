@@ -1,5 +1,5 @@
 ---
-import Socials from '../components/Socials/Socials.tsx';
+import Socials from '../components/Socials.tsx';
 import { courses } from '../data/Courses.ts';
 
 interface Props {
@@ -76,13 +76,13 @@ const { title } = Astro.props;
 								</span>
 							</a>
 						</li>
-						<li class="relative flex flex-row items-center h-[80px]">
+						<li class="group relative flex flex-row items-center h-[80px]">
 							<a href="/classrooms/" class="relative after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 								<span class="text-cecla-purple hover:transition focus:transition">
 									Aulas/Áreas
 								</span>
 							</a>
-							<div class="classrooms-list absolute top-[75px] right-[-20px] w-[380px] h-0 opacity-0 transition-all duration-[0.2s] ease-in-out">
+							<div class="classrooms-list *:hidden absolute top-[75px] right-[-20px] w-[380px] h-0 opacity-0 transition-all duration-[0.2s] ease-in-out group-hover:h-[407px] group-hover:opacity-100 group-hover:bg-white group-hover:border group-hover:border-cecla-purple group-hover:rounded-xl group-hover:shadow-[11px_10px_23px_-15px_rgba(0,0,0,0.75)] group-hover:z-10 group-hover:after:absolute group-hover:after:top-[-13px] group-hover:after:right-[52px] group-hover:after:content-[''] group-hover:after:w-[23px] group-hover:after:h-[23px] group-hover:after:bg-white group-hover:after:border-t group-hover:after:border-t-cecla-purple group-hover:after:border-r group-hover:after:border-r-cecla-purple group-hover:after:-rotate-45 group-hover:after:z-50">
 								<ul class="py-[10px] px-[20px] h-full">
 									{
 										courses.map((course, index) => (
@@ -247,38 +247,12 @@ const { title } = Astro.props;
 		list-style: none;
 		text-decoration: none;
 	}
-	.classrooms-list * {
-		display: none;
-	}
-	.navbar-navigation > ul > li:nth-child(2):hover .classrooms-list {
-		height: 407px;
-		opacity: 1;
-		background-color: #fff;
-		border: 1px solid var(--cecla-purple);
-		border-radius: 10px;
-		box-shadow: 11px 10px 23px -15px rgba(0, 0, 0, 0.75);
-		-webkit-box-shadow: 11px 10px 23px -15px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 11px 10px 23px -15px rgba(0, 0, 0, 0.75);
-		z-index: 5;
-	}
 	.navbar-navigation > ul > li:nth-child(2):hover .classrooms-list * {
 		display: block;
-	}
-	.navbar-navigation > ul > li:nth-child(2):hover .classrooms-list::after {
-		position: absolute;
-		top: -13px;
-		right: 52px;
-		content: "";
-		width: 23px;
-		height: 23px;
-		background-color: #fff;
-		border-top: 1px solid var(--cecla-purple);
-		border-right: 1px solid var(--cecla-purple);
-		transform: rotate(-45deg);
 	}
 	footer * {
 		color: #fff;
 	}
 </style>
 
-<script src="https://kit.fontawesome.com/77f004acae.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/77f004acae.js" crossorigin="anonymous"></script>../components/Socials.tsx
