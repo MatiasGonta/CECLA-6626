@@ -16,10 +16,8 @@ const Socials: React.FC<SocialsInterface> = () => {
 
     if (type === 'EMAIL') {
       navigator.clipboard.writeText("cecla6626@yahoo.com.ar");
-      console.log(navigator.clipboard)
     } else {
       navigator.clipboard.writeText("03471 42-9165");
-      console.log(navigator.clipboard)
     }
 
     setTimeout(() => {
