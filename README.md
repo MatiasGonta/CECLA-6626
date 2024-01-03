@@ -8,7 +8,7 @@
 
 "CECLA 6626" is a modernized version of the existing website of the Labor Training Center 6626, Brigadier General Estanislao López (CECLA 6626), leveraging Astro and Tailwind to enhance both user experience (UX) and user interface (UI). This renovation focuses on providing a more intuitive, modern, simple, and user-friendly design compared to the original. Key features include a streamlined homepage, a better-organized course catalog, and a clearer presentation of enrollment information overall.
 
-![CECLA6626](./CCECLA6626-preview.png)
+![CECLA6626](./CECLA6626-preview.png)
 
 You can <a href="https://www.youtube.com/watch?v=JaWBVzGBzH8" target="_blank">**click here**</a> to see an overview of the page.
 
