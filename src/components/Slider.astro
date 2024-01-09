@@ -1,59 +1,35 @@
 ---
+const slideFragments = [1, 2, 3, 4, 5, 6, 7, 8];
 ---
 
 <div class="h-[250px] m-auto relative w-full grid place-items-center overflow-hidden bg-cecla-purple before:bg-gradient-to-l before:from-transparent before:to-cecla-purple after:bg-gradient-to-r after:from-transparent after:to-cecla-purple before:content-[''] after:content-[''] before:h-full after:h-full before:absolute after:absolute before:w-[15%] after:w-[15%] before:z-10 after:z-10 before:left-0 before:top-0 after:right-0 after:top-0">
-    <div class="slider-track flex w-[calc(250px * 16)] animate-slider hover:pause-slider">
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-01.jpg" alt="slide-01" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-02.jpg" alt="slide-02" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-03.jpg" alt="slide-03" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-04.jpg" alt="slide-04" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-05.jpg" alt="slide-05" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-06.jpg" alt="slide-06" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-07.jpg" alt="slide-07" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-08.jpg" alt="slide-08" />
-		</div>
+	<div class="slider-track flex w-[calc(250px * 16)] animate-slider">
+		<!-- First roll -->
+		{
+			slideFragments.map((slide) => (
+				<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
+					<img
+						class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]"
+						src={`/assets/slide-0${slide}.jpg`}
+						alt={`slide-0${slide}`}
+					/>
+				</div>
+			))
+		}
 
-
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-01.jpg" alt="slide-01" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-02.jpg" alt="slide-02" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-03.jpg" alt="slide-03" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-04.jpg" alt="slide-04" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-05.jpg" alt="slide-05" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-06.jpg" alt="slide-06" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-07.jpg" alt="slide-07" />
-		</div>
-		<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
-			<img class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]" src="/assets/slide-08.jpg" alt="slide-08" />
-		</div>
-    </div>
+		<!-- Second roll -->
+		{
+			slideFragments.map((slide) => (
+				<div class="h-[200px] w-[250px] flex items-center p-[15px] perspective-[100px]">
+					<img
+						class="w-full h-full select-none transition-all hover:rounded-[2%] hover:transform hover:scale-[1.2]"
+						src={`/assets/slide-0${slide}.jpg`}
+						alt={`slide-0${slide}`}
+					/>
+				</div>
+			))
+		}
+	</div>
 </div>
 
 <style>
