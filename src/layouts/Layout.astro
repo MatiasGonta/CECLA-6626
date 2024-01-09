@@ -1,5 +1,5 @@
 ---
-import Socials from '../components/Socials.tsx';
+import Socials from '../components/Socials.astro';
 import { courses } from '../data/Courses.ts';
 
 interface Props {
@@ -128,7 +128,7 @@ const { title } = Astro.props;
 				  	<h3 class="text-[#fff] font-bold">
 						<i class="fa-solid fa-globe text-[#fff]"></i> Por novedades y/o consultas también podes comunicarte a nuestras redes sociales
 				  	</h3>
-				  	<Socials client:only />
+				  	<Socials />
 				</article>
 			</section>
 		</main>
@@ -255,4 +255,4 @@ const { title } = Astro.props;
 	}
 </style>
 
-<script src="https://kit.fontawesome.com/77f004acae.js" crossorigin="anonymous"></script>../components/Socials.tsx
+<script src="https://kit.fontawesome.com/77f004acae.js" crossorigin="anonymous"></script>

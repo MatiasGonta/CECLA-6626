@@ -20,8 +20,8 @@ You can <a href="https://www.youtube.com/watch?v=JaWBVzGBzH8" target="_blank">**
 
 ## Technologies Used
 
+- <a href="https://www.typescriptlang.org/docs/" target="_blank">**Typescript**</a>: A superset of JavaScript that adds static types and other features to the language syntax.
 - <a href="https://astro.build/" target="_blank">**Astro**</a>: A modern static site generator that brings performance and developer experience to the forefront, offering a seamless and efficient development process.
-- <a href="https://react.dev/" target="_blank">**React**</a>: A JavaScript library for building interactive user interfaces. In this context, is used to contribute the creation and management of interactive components, acting as "islands" within a static environment such as Astro.
 - <a href="https://tailwindcss.com/" target="_blank">**Tailwind CSS**</a>: A utility-first CSS framework that simplifies styling by providing low-level utility classes, enabling a straightforward and fast approach to building modern and responsive interfaces.
 
 ## Project Structure
@@ -62,8 +62,8 @@ Puedes hacer <a href="https://www.youtube.com/watch?v=JaWBVzGBzH8" target="_blan
 
 ## Tecnologías utilizadas
 
+- <a href="https://www.typescriptlang.org/docs/" target="_blank">**Typescript**</a>: Un superconjunto de JavaScript que agrega tipos estáticos y otras funciones a la sintaxis del lenguaje.
 - <a href="https://astro.build/" target="_blank">**Astro**</a>: Un moderno generador de sitios estáticos que pone el rendimiento y la experiencia del desarrollador en primer plano, ofreciendo un proceso de desarrollo fluido y eficiente.
-- <a href="https://react.dev/" target="_blank">**React**</a>: Una biblioteca de JavaScript para crear interfaces de usuario interactivas. En este contexto, se utiliza para contribuir a la creación y gestión de componentes interactivos, actuando como "islas" dentro de un entorno estático como lo es Astro.
 - <a href="https://tailwindcss.com/" target="_blank">**Tailwind CSS**</a>: Un framework de CSS centrado en las utilidades, que simplifica el estilo al proporcionar clases de utilidades de bajo nivel, lo que permite un enfoque sencillo y rápido para crear interfaces modernas y responsivas.
 
 ## Estructura del proyecto
