@@ -1,5 +1,7 @@
 ---
+import WorldIcon from '../icons/World.icon.astro';
 import Socials from '../components/Socials.astro';
+import SocialBanner from '../components/SocialBanner.astro';
 import { courses } from '../data/Courses.ts';
 
 interface Props {
@@ -20,48 +22,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="bg-cecla-purple font-bold">
-			<div class="h-[40px] my-0 mx-auto w-full max-w-[1300px] py-0 px-0 sm:px-[25px] lg:px-[50px]">
-				<ul class="w-[400px] h-full flex flex-row justify-between items-center list-none mx-auto sm:w-[450px] lg:px-0 lg:mx-0">
-					<li class="inline">
-						<i class="fa-solid fa-phone my-0 mx-[2.5px] text-[15px] text-[#fff]"></i>
-						<span class="my-0 mx-[2.5px] text-[15px] text-[#fff]">
-							03471 42-9165
-						</span>
-					</li>
-					<li>
-						<i class="fa-regular fa-envelope my-0 mx-[2.5px] text-[15px] text-[#fff]"></i>
-						<span class="my-0 mx-[2.5px] text-[15px] text-[#fff]">
-							cecla6626@yahoo.com.ar
-						</span>
-					</li>
-					<li>
-						<a
-							href="https://www.facebook.com/c6626"
-							target="_blank"
-						>
-							<i class="fa-brands fa-facebook-f my-0 mx-[2.5px] text-[15px] text-[#fff]"></i>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.instagram.com/cecla6626/"
-							target="_blank"
-						>
-							<i class="fa-brands fa-instagram my-0 mx-[2.5px] text-[15px] text-[#fff]"></i>
-						</a>
-					</li>
-					<li>
-						<i class="fa-brands fa-whatsapp my-0 mx-[2.5px] text-[15px] text-[#fff]"></i>
-					</li>
-				</ul>
-			</div>
-		</div>
 		<header class="w-full">
-			<nav class="h-[160px] bg-white flex flex-col justify-evenly items-center my-0 mx-auto w-full max-w-[1300px] py-0 px-[25px] lg:flex-row lg:h-[80px] lg:justify-between sm:px-[50px]">
+			<div class="bg-cecla-purple font-bold">
+				<div class="mx-auto w-full max-w-[1300px] py-2 px-0 sm:px-6 lg:px-12">
+					<SocialBanner />
+				</div>
+			</div>
+			<nav class="h-[160px] bg-white flex flex-col justify-evenly items-center mx-auto w-full max-w-[1300px] py-0 px-6 lg:flex-row lg:h-20 lg:justify-between sm:px-12">
 				<div>
 					<a href="/" class="flex justify-between items-center w-full sm:w-[530px]">
-						<img src="/assets/CECLA6626-logo.png" alt="CECLA6626" class="w-[65px] h-[65px] mr-[5px] sm:ml-0" />
+						<img src="/assets/CECLA6626-logo.png" alt="CECLA6626" class="w-16 h-16 mr-1.5 sm:ml-0" />
 						<span class="font-bold text-cecla-purple text-[20px] text-justify">
 							Sitio Web oficial CECLA 6626 - Cañada de Gómez
 						</span>
@@ -69,27 +39,28 @@ const { title } = Astro.props;
 				</div>
 				<div class="navbar-navigation text-cecla-purple">
 					<ul class="w-[375px] flex flex-row justify-between xl:w-[400px]">
-						<li class="flex flex-row items-center h-[80px]">
-							<a href="/about" class="relative after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+						<li class="flex flex-row items-center h-20">
+							<a href="/about" class="relative after:w-0 after:h-px after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 								<span class="text-cecla-purple hover:transition focus:transition">
 									Sobre la Institución
 								</span>
 							</a>
 						</li>
-						<li class="group relative flex flex-row items-center h-[80px]">
-							<a href="/classrooms/" class="relative after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+
+						<li class="group relative flex flex-row items-center h-20">
+							<a href="/classrooms/" class="relative after:w-0 after:h-px after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 								<span class="text-cecla-purple hover:transition focus:transition">
 									Aulas/Áreas
 								</span>
 							</a>
-							<div class="classrooms-list *:hidden absolute top-[75px] right-[-20px] w-[380px] h-0 opacity-0 transition-all duration-[0.2s] ease-in-out group-hover:h-[407px] group-hover:opacity-100 group-hover:bg-white group-hover:border group-hover:border-cecla-purple group-hover:rounded-xl group-hover:shadow-[11px_10px_23px_-15px_rgba(0,0,0,0.75)] group-hover:z-10 group-hover:after:absolute group-hover:after:top-[-13px] group-hover:after:right-[52px] group-hover:after:content-[''] group-hover:after:w-[23px] group-hover:after:h-[23px] group-hover:after:bg-white group-hover:after:border-t group-hover:after:border-t-cecla-purple group-hover:after:border-r group-hover:after:border-r-cecla-purple group-hover:after:-rotate-45 group-hover:after:z-50">
-								<ul class="py-[10px] px-[20px] h-full">
+							<div class="classrooms-list *:hidden absolute top-[75px] -right-5 w-[380px] h-0 opacity-0 transition-all duration-200 ease-in-out group-hover:h-[407px] group-hover:opacity-100 group-hover:bg-white group-hover:border group-hover:border-cecla-purple group-hover:rounded-xl group-hover:shadow-[11px_10px_23px_-15px_rgba(0,0,0,0.75)] group-hover:z-10 group-hover:after:absolute group-hover:after:top-[-13px] group-hover:after:right-[52px] group-hover:after:content-[''] group-hover:after:w-[23px] group-hover:after:h-[23px] group-hover:after:bg-white group-hover:after:border-t group-hover:after:border-t-cecla-purple group-hover:after:border-r group-hover:after:border-r-cecla-purple group-hover:after:-rotate-45 group-hover:after:z-50">
+								<ul class="py-2.5 px-5 h-full">
 									{
 										courses.map((course, index) => (
-											<li class={`py-[5px] px-0 ${index !== 0 && "border-t-[1px] border-t-solid border-t-cecla-transparent-purple"}`}>
+											<li class={`py-1.5 px-0 ${index !== 0 && "border-t border-t-solid border-t-cecla-transparent-purple"}`}>
 												<a
 													href={`/classrooms/${course.theme.toLocaleLowerCase().trim()}`}
-													class="text-cecla-purple p-[5px] rounded-[2.5px] cursor-pointer hover:bg-cecla-transparent-purple"
+													class="text-cecla-purple p-1.5 rounded-sm cursor-pointer hover:bg-cecla-transparent-purple"
 												>
 													{course.theme}
 												</a>
@@ -99,8 +70,9 @@ const { title } = Astro.props;
 								</ul>
 							</div>
 						</li>
-						<li class="flex flex-row items-center h-[80px]">
-							<a href="/signup" class="relative after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+
+						<li class="flex flex-row items-center h-20">
+							<a href="/signup" class="relative after:w-0 after:h-px after:content-[''] after:absolute after:-bottom-px after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 								<span class="text-cecla-purple hover:transition focus:transition">
 									Sobre inscripciones
 								</span>
@@ -110,10 +82,12 @@ const { title } = Astro.props;
 				</div>
 			</nav>
 		</header>
+
 		<main class="overflow-hidden w-full">
 			<slot />
-			<section class="w-full flex flex-col-reverse items-center bg-cecla-purple p-[50px] lg:justify-evenly lg:flex-row">
-				<article class="w-[300px] flex flex-col justify-center items-center mt-[50px] lg:m-0">
+			
+			<section class="w-full flex flex-col-reverse items-center bg-cecla-purple p-12 lg:justify-evenly lg:flex-row">
+				<article class="w-[300px] flex flex-col justify-center items-center mt-12 lg:m-0">
 				  <iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.6129394361346!2d-61.39747558567285!3d-32.82901918095639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c9df98e5b6d283%3A0x70c795a79d76485d!2sCECLA%206626!5e0!3m2!1ses!2sar!4v1618498194393!5m2!1ses!2sar"
 					width="auto"
@@ -125,17 +99,21 @@ const { title } = Astro.props;
 				  </iframe>
 				</article>
 				<article class="flex flex-col items-center text-[25px] lg:w-[560px]">
-				  	<h3 class="text-[#fff] font-bold">
-						<i class="fa-solid fa-globe text-[#fff]"></i> Por novedades y/o consultas también podes comunicarte a nuestras redes sociales
+				  	<h3 class="text-white font-bold flex gap-1">
+						<div class="w-12 h-12 -mt-1">
+							<WorldIcon />
+						</div>
+						Por novedades y/o consultas también podes comunicarte a nuestras redes sociales
 				  	</h3>
 				  	<Socials />
 				</article>
 			</section>
 		</main>
+
 		<footer class="flex flex-col bg-[#222222] text-[18px]">
-			<div class="w-full max-w-[1300px] min-h-[600px] flex flex-col-reverse items-center justify-between my-0 mx-auto py-[25px] px-[50px] lg:flex-row lg:min-h-full">
+			<div class="w-full max-w-[1300px] min-h-[600px] flex flex-col-reverse items-center justify-between mx-auto py-6 px-12 lg:flex-row lg:min-h-full">
 				<div class="h-auto lg:h-[140px]">
-					<ul class="w-[275px] h-auto flex flex-col justify-between text-justify lg:w-auto lg:h-[110px]">
+					<ul class="w-[275px] h-auto flex flex-col justify-between text-justify lg:w-auto lg:h-[110px] text-white">
 						<li>
 							<strong>Teléfono:</strong> 03471 42-9165
 						</li>
@@ -150,27 +128,27 @@ const { title } = Astro.props;
 						</li>
 					</ul>
 				</div>
-				<div class="h-[140px]">
+				<div class="h-[140px] text-white">
 					<h5 class="font-bold">NAVEGACIÓN</h5>
 					<nav>
-						<ul class="mt-[5px] h-[110px] flex flex-col justify-evenly">
+						<ul class="mt-1.5 h-[110px] flex flex-col justify-evenly">
 							<li>
-								<a href="/" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+								<a href="/" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-px after:content-[''] after:absolute after:-bottom-px after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 									Inicio
 								</a>
 							</li>
 							<li>
-								<a href="/about" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+								<a href="/about" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-px after:content-[''] after:absolute after:-bottom-px after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 									Sobre la Institución
 								</a>
 							</li>
 							<li>
-								<a href="/classrooms" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+								<a href="/classrooms" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-px after:content-[''] after:absolute after:-bottom-px after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 									Aulas/Áreas
 								</a>
 							</li>
 							<li>
-								<a href="/signup" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-[1px] after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
+								<a href="/signup" class="relative hover:text-cecla-purple hover:transition focus:text-cecla-purple focus:transition after:w-0 after:h-px after:content-[''] after:absolute after:-bottom-px after:left-0 after:bg-cecla-purple after:transition-all hover:after:w-full">
 									Sobre inscripciones
 								</a>
 							</li>
@@ -185,45 +163,13 @@ const { title } = Astro.props;
 					/>
 				</div>
 			</div>
-			<div class="bg-[#171717] py-[15px] text-[15px] lg:py-0">
-				<div class="h-[55px] w-full max-w-[1300px] py-0 px-[50px] my-0 mx-auto flex flex-col justify-between items-center lg:flex-row">
+			<div class="bg-[#171717] py-4 text-[15px] lg:py-0">
+				<div class="h-14 w-full max-w-[1300px] py-0 px-12 mx-auto flex flex-col justify-between items-center lg:flex-row text-white">
 					<div>
 						<span>CECLA6626© 2018. Todos los derechos reservados.</span>
 					</div>
 					<div>
-						<ul class="w-[450px] flex flex-row flex-wrap justify-between items-center">
-							<li class="inline">
-								<i class="fa-solid fa-phone"></i>
-								<span class="my-0 mx-[2.5px]">
-									03471 42-9165
-								</span>
-							</li>
-							<li class="inline">
-								<i class="fa-regular fa-envelope"></i>
-								<span class="my-0 mx-[2.5px]">
-									cecla6626@yahoo.com.ar
-								</span>
-							</li>
-							<li class="inline">
-								<a
-									href="https://www.facebook.com/c6626"
-									target="_blank"
-								>
-									<i class="fa-brands fa-facebook-f"></i>
-								</a>
-							</li>
-							<li class="inline">
-								<a
-									href="https://www.instagram.com/cecla6626/"
-									target="_blank"
-								>
-									<i class="fa-brands fa-instagram"></i>
-								</a>
-							</li>
-							<li class="inline">
-								<i class="fa-brands fa-whatsapp"></i>
-							</li>
-						</ul>
+						<SocialBanner />
 					</div>
 				</div>
 			</div>
@@ -238,9 +184,9 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background: #fff;
+		color: #13151a;
 	}
 	* {
-		color: #13151a;
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -250,9 +196,4 @@ const { title } = Astro.props;
 	.navbar-navigation > ul > li:nth-child(2):hover .classrooms-list * {
 		display: block;
 	}
-	footer * {
-		color: #fff;
-	}
 </style>
-
-<script src="https://kit.fontawesome.com/77f004acae.js" crossorigin="anonymous"></script>

@@ -1,19 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CalendarIcon from "../icons/Calendar.icon.astro";
+import FileIcon from "../icons/File.icon.astro";
 ---
 
 <Layout title="CECLA 6626 - Inscripciones">
 	<section class="w-full flex flex-col">
+
 		<article class="w-full h-[450px] bg-cecla-front bg-cover">
-			<div
-				class="w-full h-full flex justify-center items-center bg-[#222222e8]"
-			>
+			<div class="w-full h-full flex justify-center items-center bg-[#222222e8]">
 				<h1 class="text-white text-[45px] font-bold">Ingreso CECLA</h1>
 			</div>
 		</article>
-		<article
-			class="w-full p-[30px] sm:p-[60px] text-justify relative bg-white max-w-[1300px] mx-auto"
-		>
+
+		<article class="w-full p-[30px] sm:p-[60px] text-justify relative bg-white max-w-[1300px] mx-auto">
 			<h2 class="font-bold text-[30px] mb-[15px] text-cecla-purple">
 				¡Inscribite en el CECLA, te esperamos!
 			</h2>
@@ -24,74 +24,49 @@ import Layout from "../layouts/Layout.astro";
 				Ministerio de Educación de la provincia de Santa Fe.
 			</p>
 		</article>
+
 	</section>
+	
 	<section>
-		<article
-			class="bg-cecla-purple w-full h-[150px] mb-[325px] md:mb-[300px]"
-		>
-			<div
-				class="relative max-w-[1300px] mx-auto px-[25px] py-[25px] sm:px-[60px]"
-			>
+
+		<article class="bg-cecla-purple w-full h-[150px] mb-[325px] md:mb-[300px]">
+			<div class="relative max-w-[1300px] mx-auto p-6 sm:px-[60px]">
 				<h3 class="font-bold text-[30px] text-white">Horario</h3>
-				<div
-					class="flex flex-col md:flex-row w-[calc(100%-50px)] sm:w-[calc(100%-120px)] md:h-[275px] bg-white absolute bottom-[-325px] md:bottom-[-275px] rounded-[1px] shadow-lg"
-				>
-					<div
-						class="w-full h-[225px] md:h-full md:w-[25%] bg-cecla-purple-light flex justify-center items-center"
-					>
-						<i
-							class="fa-regular fa-calendar-days text-[75px] text-cecla-purple"
-						></i>
+				<div class="flex flex-col md:flex-row w-[calc(100%-50px)] sm:w-[calc(100%-120px)] md:h-[275px] bg-white absolute bottom-[-325px] md:bottom-[-275px] rounded-[1px] shadow-lg">
+					<div class="w-full h-[225px] md:h-full md:w-1/4 bg-cecla-purple-light flex justify-center items-center">
+						<div class="w-16 h-16">
+							<CalendarIcon color="#41429c" />
+						</div>
 					</div>
-					<div class="w-full md:w-[75%] p-[25px] text-justify">
+					<div class="w-full md:w-3/4 p-6 text-justify">
 						<p class="text-wrap">
-							Las inscripciones se encuentran abiertas de <strong
-								class="text-cecla-purple">19hs a 21hs</strong
-							> en nuestra institución.
+							Las inscripciones se encuentran abiertas de <strong class="text-cecla-purple">19hs a 21hs</strong> en nuestra institución.
 						</p>
 					</div>
 				</div>
 			</div>
 		</article>
-		<article
-			class="bg-cecla-purple w-full h-[150px] mb-[500px] md:mb-[300px]"
-		>
-			<div
-				class="relative max-w-[1300px] mx-auto px-[25px] py-[25px] sm:px-[60px]"
-			>
+
+		<article class="bg-cecla-purple w-full h-[150px] mb-[500px] md:mb-[300px]">
+			<div class="relative max-w-[1300px] mx-auto p-6 sm:px-[60px]">
 				<h3 class="font-bold text-[30px] text-white">Documentación</h3>
-				<div
-					class="flex flex-col md:flex-row w-[calc(100%-50px)] sm:w-[calc(100%-120px)] md:h-[275px] bg-white absolute bottom-[-510px] md:bottom-[-275px] rounded-[1px] shadow-lg"
-				>
-					<div
-						class="w-full h-[225px] md:h-full md:w-[25%] bg-cecla-purple-light flex justify-center items-center"
-					>
-						<i
-							class="fa-regular fa-file-lines text-[75px] text-cecla-purple"
-						></i>
+				<div class="flex flex-col md:flex-row w-[calc(100%-50px)] sm:w-[calc(100%-120px)] md:h-[275px] bg-white absolute bottom-[-510px] md:bottom-[-275px] rounded-sm shadow-lg">
+					<div class="w-full h-[225px] md:h-full md:w-1/4 bg-cecla-purple-light flex justify-center items-center">
+						<div class="w-20 h-20">
+							<FileIcon />
+						</div>
 					</div>
-					<div class="w-full md:w-[75%] p-[25px] text-justify">
-						<span class="text-wrap"
-							>La <strong class="text-cecla-purple"
-								>documentación necesaria</strong
-							> para cualquiera de las inscripciones incluye los
-							siguientes elementos:</span
-						>
-						<ul class="pl-[40px]">
-							<li
-								class="pl-[5px] mt-[15px] relative leading-[20px] before:content-[''] before:block before:h-[12px] before:w-[12px] before:rounded-[50%] before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:left-[-25px]"
-							>
+					<div class="w-full md:w-3/4 p-6 text-justify">
+						<span class="text-wrap">La <strong class="text-cecla-purple">documentación necesaria</strong> para cualquiera de las inscripciones incluye los siguientes elementos:</span>
+						<ul class="pl-10">
+							<li class="pl-1.5 mt-4 relative leading-[20px] before:content-[''] before:block before:h-3 before:w-3 before:rounded-full before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:-left-6">
 								Fotocopia de DNI.
 							</li>
-							<li
-								class="pl-[5px] mt-[15px] relative leading-[20px] before:content-[''] before:block before:h-[12px] before:w-[12px] before:rounded-[50%] before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:left-[-25px]"
-							>
+							<li class="pl-1.5 mt-4 relative leading-[20px] before:content-[''] before:block before:h-3 before:w-3 before:rounded-full before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:-left-6">
 								Constancia de Cuil (En el caso de que el número
 								de CUIL no esté registrado en el DNI).
 							</li>
-							<li
-								class="pl-[5px] mt-[15px] relative leading-[20px] before:content-[''] before:block before:h-[12px] before:w-[12px] before:rounded-[50%] before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:left-[-25px]"
-							>
+							<li class="pl-1.5 mt-4 relative leading-[20px] before:content-[''] before:block before:h-3 before:w-3 before:rounded-full before:border-2 before:border-cecla-purple-light before:absolute before:top-1 before:-left-6">
 								Fotocopia Título (Primario/Secundario) (En el
 								caso específico de la inscripción como Gasista
 								Domiciliario, se exige la presentación de un
@@ -102,5 +77,6 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</article>
+
 	</section>
 </Layout>

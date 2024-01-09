@@ -1,0 +1,51 @@
+---
+import PhoneIcon from '../icons/Phone.icon.astro';
+import EmailIcon from '../icons/social/Email.icon.astro';
+import FacebookIcon from '../icons/social/Facebook.icon.astro';
+import InstagramIcon from '../icons/social/Instagram.icon.astro';
+import WhatsappIcon from '../icons/social/Whatsapp.icon.astro';
+---
+
+<ul class="w-[450px] flex flex-row flex-wrap justify-between items-center">
+    <li class="flex gap-1.5">
+        <div class="w-4 h-4 mt-0.5">
+            <PhoneIcon />
+        </div>
+        <span class="text-white">
+            03471 42-9165
+        </span>
+    </li>
+    <li class="flex gap-1.5">
+        <div class="w-4 h-4 mt-1">
+            <EmailIcon />
+        </div>
+        <span class="my-0 text-white">
+            cecla6626@yahoo.com.ar
+        </span>
+    </li>
+    <li>
+        <a
+            href="https://www.facebook.com/c6626"
+            target="_blank"
+        >
+            <div class="w-3.5 h-3.5">
+                <FacebookIcon />
+            </div>
+        </a>
+    </li>
+    <li>
+        <a
+            href="https://www.instagram.com/cecla6626/"
+            target="_blank"
+        >
+            <div class="w-4 h-4">
+                <InstagramIcon />
+            </div>
+        </a>
+    </li>
+    <li>
+        <div class="w-4 h-4">
+            <WhatsappIcon />
+        </div>
+    </li>
+</ul>

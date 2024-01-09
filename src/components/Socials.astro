@@ -1,20 +1,23 @@
 ---
+import InstagramIcon from '../icons/social/Instagram.icon.astro';
+import FacebookIcon from '../icons/social/Facebook.icon.astro';
+import WhatsappIcon from '../icons/social/Whatsapp.icon.astro';
+import EmailIcon from '../icons/social/Email.icon.astro';
 
+import ExclamationIcon from '../icons/Exclamation.icon.astro';
 ---
 
 <>
-    <div
-        class="w-fit h-fit bg-[rgb(238,238,238)] flex items-center justify-center p-5 gap-5 text-[16px] mt-6 shadow-[0px_0px_20px_rgba(0,0,0,0.055)] rounded"
-    >
+    <div class="w-fit h-fit bg-[rgb(238,238,238)] flex items-center justify-center p-5 gap-5 text-[16px] mt-6 shadow-[0px_0px_20px_rgba(0,0,0,0.055)] rounded">
         {/* Instagram */}
         <a
             class="group w-[52px] h-[52px] bg-[rgb(44,44,44)] flex items-center justify-center overflow-hidden duration-300 cursor-pointer active:scale-90 hover:bg-[#d62976]"
             href="https://www.instagram.com/cecla6626/"
             target="_blank"
         >
-            <i
-                class="fa-brands fa-instagram text-white group-hover:animate-slide-in-top"
-            ></i>
+            <div class="w-5 h-5 group-hover:animate-slide-in-top">
+                <InstagramIcon />
+            </div>
         </a>
 
         {/* Facebook */}
@@ -23,24 +26,30 @@
             href="https://www.facebook.com/c6626"
             target="_blank"
         >
-            <i
-                class="fa-brands fa-facebook-f text-white group-hover:animate-slide-in-top"
-            ></i>
+            <div class="-mr-2 w-4 h-4 group-hover:animate-slide-in-top">
+                <FacebookIcon />
+            </div>
         </a>
 
         {/* Whatsapp */}
         <span id="whatsapp" class="group w-[52px] h-[52px] bg-[rgb(44,44,44)] flex items-center justify-center overflow-hidden duration-300 cursor-pointer active:scale-90 hover:bg-[#128c7e]">
-            <i class="fa-brands fa-whatsapp text-white group-hover:animate-slide-in-top"></i>
+            <div class="w-5 h-5 group-hover:animate-slide-in-top">
+                <WhatsappIcon />
+            </div>
         </span>
 
         {/* Email */}
         <span id="email" class="group w-[52px] h-[52px] bg-[rgb(44,44,44)] flex items-center justify-center overflow-hidden duration-300 cursor-pointer active:scale-90 hover:bg-[#d62932]">
-            <i class="fa-regular fa-envelope text-white group-hover:animate-slide-in-top"></i>
+            <div class="w-5 h-5 group-hover:animate-slide-in-top">
+                <EmailIcon />
+            </div>
         </span>
     </div>
-    <div id="toast" class="fixed top-2.5 left-0 bg-white py-5 p-10 w-[375px] rounded border-r-8 shadow-md z-50 sm:w-[400px] hidden">
-        <span class="text-[18px]"></span>
-        <i class="fas fa-exclamation-circle text-[30px] ml-2.5 text-cecla-purple"></i>
+    <div id="toast" class="fixed top-2.5 left-0 bg-white px-10 py-5 w-[375px] rounded border-r-8 shadow-md z-50 sm:w-[400px] hidden">
+        <span class="text-[18px]">¡Numero de WhatsApp copiado en portapapeles!</span>
+        <div class="ml-2.5 w-12 h-12 flex items-center">
+            <ExclamationIcon />
+        </div>
     </div>
 </>
 

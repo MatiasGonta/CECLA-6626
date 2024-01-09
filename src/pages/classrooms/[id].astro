@@ -1,4 +1,7 @@
 ---
+import ClockIcon from "../../icons/Clock.icon.astro";
+import TieIcon from "../../icons/Tie.icon.astro";
+import CalendarIcon from "../../icons/Calendar.icon.astro";
 import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
 import { courses } from "../../data/Courses.ts";
@@ -37,9 +40,7 @@ const course = courses.find((c) => c.theme === capitalizeWords(id!));
                 backgroundPosition: "center",
             }}
         >
-            <div
-                class="w-full min-h-[350px] h-full flex items-center bg-[linear-gradient(270deg,rgba(34,34,34,0)_10%,rgba(34,34,34,0.91)_75%,rgba(34,34,34,0.91)_75%,rgba(34,34,34,1)_96%)]"
-            >
+            <div class="w-full min-h-[350px] h-full flex items-center bg-[linear-gradient(270deg,rgba(34,34,34,0)_10%,rgba(34,34,34,0.91)_75%,rgba(34,34,34,0.91)_75%,rgba(34,34,34,1)_96%)]">
                 <div class="w-[90%] ml-auto my-[25px]">
                     <h2 class="text-white text-[45px] font-bold">
                         {capitalizeWords(id!)}
@@ -47,14 +48,10 @@ const course = courses.find((c) => c.theme === capitalizeWords(id!));
                     <h3 class="mb-[25px] text-[20px] text-white">
                         Docente: {course!.teacher}
                     </h3>
-                    <ul class="text-[20px]">
+                    <ul class="text-[20px] flex flex-col gap-1.5">
                         {
-                            course!.skills.map((s: string, index: number) => (
-                                <li
-                                    class={`text-white ${
-                                        index !== 0 && "mt-[5px]"
-                                    }`}
-                                >
+                            course!.skills.map((s: string) => (
+                                <li class="text-white">
                                     <span class="mr-[15px] text-white">></span>
                                     {s}
                                 </li>
@@ -65,6 +62,7 @@ const course = courses.find((c) => c.theme === capitalizeWords(id!));
             </div>
         </article>
     </section>
+    
     <section>
         {
             course!.courseList.map((c) => (
@@ -75,28 +73,34 @@ const course = courses.find((c) => c.theme === capitalizeWords(id!));
                         </h4>
                     </div>
                     <div class="max-w-[1280px] mx-[25px] xl:mx-auto">
-                        <ul class="max-w-[1280px] mx-auto flex flex-col justify-evenly items-center my-[50px] sm:flex-row">
-                            <li class="flex flex-col items-center w-[225px] h-[165px] mb-[50px] sm:mb-0">
-                                <div class="mb-[15px] bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
-                                    <i class="fa-regular fa-clock text-[50px] text-white"></i>
+                        <ul class="max-w-[1280px] mx-auto flex flex-col justify-evenly items-center my-12 gap-12 sm:gap-0 sm:flex-row">
+                            <li class="flex flex-col items-center w-[225px] h-[165px]">
+                                <div class="mb-4 bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
+                                    <div class="w-14 h-14">
+                                        <ClockIcon />
+                                    </div>
                                 </div>
                                 <span class="text-[16px] text-center text-cecla-purple-light font-bold">{c.duration}</span>
                             </li>
-                            <li class="flex flex-col items-center w-[225px] h-[165px] mb-[50px] sm:mb-0">
-                                <div class="mb-[15px] bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
-                                    <i class="fa-solid fa-user-tie text-[50px] text-white"></i>
+                            <li class="flex flex-col items-center w-[225px] h-[165px]">
+                                <div class="mb-4 bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
+                                    <div class="w-14 h-14">
+                                        <TieIcon />
+                                    </div>
                                 </div>
                                 <span class="text-[16px] text-center text-cecla-purple-light font-bold">{c.output}</span>
                             </li>
                             <li class="flex flex-col items-center w-[225px] h-[165px]">
-                                <div class="mb-[15px] bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
-                                    <i class="fa-regular fa-calendar-days text-[50px] text-white"></i>
+                                <div class="mb-4 bg-cecla-purple-light rounded-full w-[100px] h-[100px] flex justify-center items-center">
+                                    <div class="w-14 h-14">
+                                        <CalendarIcon color="#fff" />
+                                    </div>
                                 </div>
                                 <span class="text-[16px] text-center text-cecla-purple-light font-bold">{c.classSchedule}</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="max-w-[1280px] mx-[25px] xl:mx-auto mb-[50px] text-justify">
+                    <div class="max-w-[1280px] mx-6 xl:mx-auto mb-12 text-justify">
                         <p class="text-wrap text-[16px]">
                             {c.description}
                         </p>
@@ -106,3 +110,5 @@ const course = courses.find((c) => c.theme === capitalizeWords(id!));
         }
     </section>
 </Layout>
+
+<script></script>
