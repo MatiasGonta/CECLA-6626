@@ -26,7 +26,8 @@ You can <a href="https://www.youtube.com/watch?v=JaWBVzGBzH8" target="_blank">**
 
 ## Project Structure
 
-- `public/assets`: Contains static assets such as images and icons used in the application.
+- `public/assets`: Contains static assets such as images and videos used in the application.
+- `src/icons`: Stores SVG icons used in the application.
 - `src/components`: Contains reusable components used in different parts of the application.
 - `src/pages`: Contains all the pages within the application.
 - `src/data`: It contains data files used in the application, such as the different courses offered by the institute.
@@ -68,7 +69,8 @@ Puedes hacer <a href="https://www.youtube.com/watch?v=JaWBVzGBzH8" target="_blan
 
 ## Estructura del proyecto
 
-- `public/assets`: Contiene activos estáticos como imágenes e iconos utilizados en la aplicación.
+- `public/assets`: Contiene activos estáticos como imágenes o videos utilizados en la aplicación.
+- `src/icons`: Almacena iconos SVG utilizados en la aplicación.
 - `src/components`: Contiene componentes reutilizables utilizados en diferentes partes de la aplicación.
 - `src/pages`: Contiene todas las páginas dentro de la aplicación.
 - `src/data`: Contiene archivos de datos utilizados en la aplicación, como los diferentes cursos que ofrece el instituto.
